@@ -15,7 +15,7 @@ export class BusTrip extends Component {
     render() {
         return (
             <div>
-                <h1 id="tabelLabel" >Поездка на автобусе</h1>
+                <h1 id="tabelLabel" >Быстрые и дешевые поездки</h1>
                 <form onSubmit={this.handleSubmit}>
                     Файл с расписанием:
                     <input type="file" ref={this.fileInput} />
@@ -52,7 +52,7 @@ export class BusTrip extends Component {
                 headers:
                 {
                     'Accept': 'application/json; charset=utf-8',
-                    'Content-Type': 'application/json;charset=UTF-8',
+                    'Content-Type': 'application/json;charset=utf-8',
                 },
                 body: JSON.stringify({ FileData: fr.result, StartTime: startTime, BusStopStart: busStopStart, BusStopEnd: busStopEnd }),
             });

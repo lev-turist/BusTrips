@@ -11,7 +11,6 @@ namespace BusTrips.Services
             List<Bus> buses = new List<Bus>();
             string[] textAsArray = text.Split("\r\n");
             Int32 busCount = Int32.Parse(textAsArray[0]);
-            Int32 busStopsCount = Int32.Parse(textAsArray[1]);
             string[] timesStartString = textAsArray[2].Split(' ');
             string[] pricesString = textAsArray[3].Split(' ');
             for (int i = 0; i < busCount; i++)

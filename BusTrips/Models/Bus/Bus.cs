@@ -1,4 +1,4 @@
-﻿namespace BusTrips
+﻿namespace BusTrips.Models
 {
     public class Bus
     {

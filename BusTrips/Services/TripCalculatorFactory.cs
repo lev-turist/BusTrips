@@ -1,6 +1,5 @@
 ﻿using BusTrips.ServiceInterfaces;
 using BusTrips.ApplicationUtils;
-using BusTrips.TripCalculator;
 using BusTrips.Models;
 
 namespace BusTrips.Services
@@ -19,7 +18,7 @@ namespace BusTrips.Services
             }
             else
             {
-                return null;
+                throw new Exception("Неверный тип расчета пути");
             }
         }
     }

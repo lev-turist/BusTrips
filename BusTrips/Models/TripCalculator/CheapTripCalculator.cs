@@ -1,7 +1,4 @@
-﻿using BusTrips.Models;
-using BusTrips.ServiceInterfaces;
-
-namespace BusTrips.TripCalculator
+﻿namespace BusTrips.Models
 {
     public class CheapTripCalculator: ITripCalculator
     {

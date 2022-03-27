@@ -1,4 +1,6 @@
-﻿namespace BusTrips.Models
+﻿using BusTrips.ApplicationUtils;
+
+namespace BusTrips.Models
 {
     public class BusPark
     {
@@ -15,7 +17,7 @@
 
         public IEnumerator<Dictionary<int, BusPath>> GetEnumerator()
         {
-            for (int i = _startMinute; i < 24 * 60; i++)
+            for (int i = _startMinute; i < Utils.MinutesInDay; i++)
             {
                 foreach (Bus bus in _buses)
                 {

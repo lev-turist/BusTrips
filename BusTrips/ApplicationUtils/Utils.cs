@@ -11,7 +11,8 @@
         public static int FromStringToMinutes(String time)
         {
             return Int32.Parse(time.Split(':')[0]) * 60 + Int32.Parse(time.Split(':')[1]);
-
         }
+
+        public const Int32 MinutesInDay = 1440;
     }
 }

@@ -19,7 +19,7 @@ namespace BusTrips.Controllers
 
         [HttpPost]
         [Route("BusTrip/Post")]
-        public async Task<ActionResult> Post([FromBody]InputData inputData)
+        public ActionResult Post([FromBody]InputData inputData)
         {
             List<Bus> buses= _fileReader.Read(inputData.FileData);
             ITripCalculator shortTripCalculator = _calculatorFactory.Create(Utils.CalculationType.ShortTime);

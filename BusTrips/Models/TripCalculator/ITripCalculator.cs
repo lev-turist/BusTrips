@@ -1,4 +1,4 @@
-﻿namespace BusTrips.TripCalculator
+﻿namespace BusTrips.Models
 {
     public interface ITripCalculator
     {

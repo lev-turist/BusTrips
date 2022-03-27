@@ -1,11 +1,5 @@
-﻿namespace BusTrips
+﻿namespace BusTrips.Models
 {
-    public class BusStop
-    {
-        public int NextBusStopNumber { get; set; }
-        public int MinutesMove { get; set; }
-    }
-                                           
     public class BusPath
     {
         public int MinutesToNextStop { get; set; }

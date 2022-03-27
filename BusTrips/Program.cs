@@ -1,5 +1,3 @@
-using BusTrips;
-using BusTrips.Reader;
 using BusTrips.ServiceInterfaces;
 using BusTrips.Services;
 
