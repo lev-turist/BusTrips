@@ -4,7 +4,7 @@ export class BusTrip extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { shortTrip: "", cheapTrip: "", loading: true };
+        this.state = { shortTrip: "", cheapTrip: "", loading: false };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.fileInput = React.createRef();
         this.timeStart = React.createRef();
@@ -31,9 +31,9 @@ export class BusTrip extends Component {
                     <input type="submit" value="Рассчитать" />
                 </form>
                 <p>Самый короткий маршрут:</p>
-                {this.state.shortTrip}
+                {this.state.loading == true ? "Загрузка ..." : this.state.shortTrip}
                 <p>Самый дешевый маршрут:</p>
-                {this.state.cheapTrip}
+                {this.state.loading == true ? "Загрузка ..." :this.state.cheapTrip}
             </div>
         );
     }
@@ -61,10 +61,11 @@ export class BusTrip extends Component {
                 this.setState({ exception: data_response.exception });
             }
             else {
-                this.setState({ shortTrip: data_response.shortTrip, cheapTrip: data_response.cheapTrip });
+                this.setState({ shortTrip: data_response.shortTrip, cheapTrip: data_response.cheapTrip, loading: false });
             }
         }
         ).bind(this);
         fr.readAsText(selectedFile);
+        this.setState({ loading: true });
     }
 }
