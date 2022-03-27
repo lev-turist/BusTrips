@@ -30,10 +30,10 @@ export class BusTrip extends Component {
                     <br />
                     <input type="submit" value="Рассчитать" />
                 </form>
-                <p>Самый короткий маршрут:</p>
-                {this.state.loading == true ? "Загрузка ..." : this.state.shortTrip}
+                <p>Самый быстрый маршрут:</p>
+                {this.state.loading ? "Загрузка ..." : this.state.shortTrip}
                 <p>Самый дешевый маршрут:</p>
-                {this.state.loading == true ? "Загрузка ..." :this.state.cheapTrip}
+                {this.state.loading ? "Загрузка ..." :this.state.cheapTrip}
             </div>
         );
     }
