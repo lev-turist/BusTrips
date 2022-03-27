@@ -20,7 +20,7 @@ export class BusTrip extends Component {
                     Файл с расписанием:
                     <input type="file" ref={this.fileInput} />
                     <br/>
-                    Время начала:
+                    Время отправления:
                     <input type="text" ref={this.timeStart} defaultValue="00:00" />
                     <br />
                     Начальная остановка:
