@@ -9,12 +9,12 @@
             int i = 0;
             foreach (var busParkState in busPark)
             {
-                ++i;
                 passenger.MinuteTick(busParkState);
                 if (passenger.States.Any(a => a.BusStop == finishBusStop))
                 {
                     return String.Format("{0} минут", i);
                 }
+                ++i;
             }
 
             return "Нет доступных маршрутов";
