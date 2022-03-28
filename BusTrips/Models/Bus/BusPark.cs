@@ -17,7 +17,7 @@ namespace BusTrips.Models
 
         public IEnumerator<Dictionary<int, BusPath>> GetEnumerator()
         {
-            for (int i = _startMinute; i < Utils.MinutesInDay; i++)
+            for (int i = _startMinute; i <= Utils.MinutesInDay; i++)
             {
                 foreach (Bus bus in _buses)
                 {
