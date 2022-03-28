@@ -60,7 +60,14 @@
                 newStates.Add(new PassengerWaitBusState(_busPath.ToStopNumber, _price));
                 foreach (var path in paths.Values.Where(w => w.FromStopNumber == _busPath.ToStopNumber && w.IsStandOnBusStop))
                 {
-                    newStates.Add(new PassengerMoveState(path, _price));
+                    if (_busPath.Bus.Number == path.Bus.Number)
+                    {
+                        newStates.Add(new PassengerMoveState(path, _price - _busPath.Bus.Price));
+                    }
+                    else
+                    {
+                        newStates.Add(new PassengerMoveState(path, _price));
+                    }
                 }
             }
             return newStates;

@@ -37,7 +37,7 @@ namespace BusTrips.Models
                                     busPath.MinutesToNextStop = pathMinutes - curMinute;
                                     busPath.FromStopNumber = stop.Key;
                                     busPath.ToStopNumber = stop.Value.NextBusStopNumber;
-                                    busPath.IsStandOnBusStop = true;
+                                    busPath.IsStandOnBusStop = curMinute == (pathMinutes - stop.Value.MinutesMove);
                                     break;
                                 }
                             }
