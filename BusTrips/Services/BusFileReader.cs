@@ -9,7 +9,16 @@ namespace BusTrips.Services
         public List<Bus> Read(String text)
         {
             List<Bus> buses = new List<Bus>();
-            string[] textAsArray = text.Split("\r\n");
+
+            string[] textAsArray;
+            if (text.Contains("\r"))
+            {
+                textAsArray = text.Split("\r\n");
+            }
+            else
+            {
+                textAsArray = text.Split("\n");
+            }
             Int32 busCount = Int32.Parse(textAsArray[0]);
             string[] timesStartString = textAsArray[2].Split(' ');
             string[] pricesString = textAsArray[3].Split(' ');

@@ -12,7 +12,7 @@
                 passenger.MinuteTick(busParkState);
                 if (passenger.States.Any(a => a.BusStop == finishBusStop))
                 {
-                    return String.Format("{0} минут", i);
+                    return String.Format("{0} мин.", i);
                 }
                 ++i;
             }

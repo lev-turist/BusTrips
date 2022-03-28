@@ -19,7 +19,7 @@
                 }
             }
 
-            return cheapPrice == -1 ? "Нет доступных маршрутов" : String.Format("{0} рублей", cheapPrice);
+            return cheapPrice == -1 ? "Нет доступных маршрутов" : String.Format("{0} руб.", cheapPrice);
         }
     }
 }
